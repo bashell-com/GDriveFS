@@ -839,7 +839,8 @@ def mount(auth_storage_filepath, mountpoint, debug=None, nothreads=None,
                 _logger.debug("Forwarding option [%s] with value [%s] to "
                               "FUSE.", k, v)
 
-                fuse_opts[k] = v
+                if k not in ('user', '_netdev'):
+                    fuse_opts[k] = v
 
     if gdrivefs.config.IS_DEBUG is True:
         _logger.debug("FUSE options:\n%s", pprint.pformat(fuse_opts))
