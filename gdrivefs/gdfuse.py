@@ -9,7 +9,7 @@ import resource
 import pprint
 import math
 
-from errno import ENOENT, EIO, ENOTDIR, ENOTEMPTY, EPERM, EEXIST
+from errno import ENOENT, EIO, EISDIR, ENOTDIR, ENOTEMPTY, EPERM, EEXIST
 from fuse import FUSE, Operations, FuseOSError, c_statvfs, fuse_get_context, \
                  LoggingMixIn
 from time import mktime, time
@@ -697,7 +697,7 @@ class _GdfsMixin(object):
             _logger.error("Can not unlink() directory [%s] with ID [%s]. "
                           "Must be file.", file_path, entry_id)
 
-            raise FuseOSError(errno.EISDIR)
+            raise FuseOSError(EISDIR)
 
         # Remove online. Complements local removal (if not found locally, a 
         # follow-up request checks online).
