@@ -1,9 +1,6 @@
 import logging
-import re
 import dateutil.parser
-import json
 import time
-import pprint
 
 from time import mktime
 from mimetypes import guess_type

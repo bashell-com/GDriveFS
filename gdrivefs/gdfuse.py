@@ -1,39 +1,29 @@
 import logging
 import stat
-import dateutil.parser
-import re
-import json
 import os
-import atexit
-import resource
 import pprint
 import math
 
-from errno import ENOENT, EIO, EISDIR, ENOTDIR, ENOTEMPTY, EPERM, EEXIST
-from fuse import FUSE, Operations, FuseOSError, c_statvfs, fuse_get_context, \
+from errno import ENOENT, EIO, EISDIR, ENOTDIR, ENOTEMPTY, EPERM
+from fuse import FUSE, Operations, FuseOSError, fuse_get_context, \
                  LoggingMixIn
-from time import mktime, time
-from sys import argv, exit, excepthook
-from datetime import datetime
+from time import time
 from os.path import split
 
-import gdrivefs.fsutility
 import gdrivefs.opened_file
-import gdrivefs.config
 import gdrivefs.config.changes
 import gdrivefs.config.fs
 
 from gdrivefs.utility import utility
 from gdrivefs.change import get_change_manager
 from gdrivefs.volume import PathRelations, EntryCache, \
-                                  CLAUSE_ENTRY, CLAUSE_PARENT, \
-                                  CLAUSE_CHILDREN, CLAUSE_ID, \
-                                  CLAUSE_CHILDREN_LOADED
+                                  CLAUSE_ENTRY, \
+                                  CLAUSE_ID
 from gdrivefs.conf import Conf
 from gdrivefs.drive import get_gdrive
 from gdrivefs.account_info import AccountInfo
 
-from gdrivefs.fsutility import strip_export_type, split_path,\
+from gdrivefs.fsutility import split_path, \
                                     build_filepath, dec_hint
 from gdrivefs.displaced_file import DisplacedFile
 from gdrivefs.volume import path_resolver

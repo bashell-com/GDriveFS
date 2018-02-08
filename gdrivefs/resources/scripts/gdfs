@@ -8,7 +8,6 @@ sys.path.insert(0, dev_path)
 import logging
 import argparse
 
-import gdrivefs.config
 import gdrivefs.config.log
 import gdrivefs.gdfuse
 

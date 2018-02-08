@@ -3,9 +3,9 @@ import time
 import random
 
 try:
-  from oauth2client import util
+    from oauth2client import util
 except ImportError:
-  from oauth2client import _helpers as util
+    from oauth2client import _helpers as util
 import apiclient.http
 import apiclient.errors
 import gdrivefs.config

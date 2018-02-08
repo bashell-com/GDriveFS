@@ -1,5 +1,4 @@
 import os
-import logging
 import logging.handlers
 
 import gdrivefs.config

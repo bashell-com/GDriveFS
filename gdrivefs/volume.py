@@ -2,14 +2,12 @@ import logging
 
 from collections    import deque
 from threading      import RLock
-from datetime       import datetime
 
 from gdrivefs.utility import utility
 from gdrivefs.conf import Conf
 from gdrivefs.drive import get_gdrive
 from gdrivefs.account_info import AccountInfo
 from gdrivefs.normal_entry import NormalEntry
-from gdrivefs.cache_registry import CacheRegistry, CacheFault
 from gdrivefs.cacheclient_base import CacheClientBase
 from gdrivefs.errors import GdNotFoundError
 

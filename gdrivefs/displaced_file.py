@@ -3,12 +3,9 @@ import json
 import tempfile
 import os
 
-from os import makedirs
-from os.path import isdir
 
 from gdrivefs.drive import get_gdrive
 from gdrivefs.normal_entry import NormalEntry
-from gdrivefs.conf import Conf
 
 _logger = logging.getLogger(__name__)
 
