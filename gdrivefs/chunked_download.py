@@ -75,13 +75,13 @@ class ChunkedDownload(object):
             _logger.debug("Attempting to read chunk. ATTEMPT=(%d)/(%d)", 
                           retry_num + 1, num_retries + 1)
 
+            resp, content = self._http.request(self._uri, headers=headers)
             if retry_num > 0:
                 self._sleep(self._rand() * 2**retry_num)
                 _logger.warning("Retry #%d for media download: GET %s, "
                                 "following status: %d", 
                                 retry_num, self._uri, resp.status)
 
-            resp, content = self._http.request(self._uri, headers=headers)
             if resp.status < 500:
                 break
 

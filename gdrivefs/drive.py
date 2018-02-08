@@ -94,7 +94,7 @@ def _marshall(f):
                 # We had a resolvable authorization problem.
 
                 _logger.info("There was an authorization fault under "
-                             "action [%s]. Attempting refresh.", action)
+                             "action [%s]. Attempting refresh.", n)
                 
                 authorize = gdrivefs.oauth_authorize.get_auth()
                 authorize.check_credential_state()
@@ -102,7 +102,7 @@ def _marshall(f):
                 # Re-attempt the action.
 
                 _logger.info("Refresh seemed successful. Reattempting "
-                             "action [%s].", action)
+                             "action [%s].", n)
 
     return wrapper
 

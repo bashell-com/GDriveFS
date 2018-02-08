@@ -48,12 +48,12 @@ class PathRelations(object):
 
         with PathRelations.rlock:
             try:
-                return CacheRegistry.__instance;
+                return PathRelations.__instance;
             except:
                 pass
 
-            CacheRegistry.__instance = PathRelations()
-            return CacheRegistry.__instance
+            PathRelations.__instance = PathRelations()
+            return PathRelations.__instance
 
     def remove_entry_recursive(self, entry_id, is_update=False):
         """Remove an entry, all children, and any newly orphaned parents."""
