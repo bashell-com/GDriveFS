@@ -8,6 +8,7 @@ except ImportError:
   from oauth2client import _helpers as util
 import apiclient.http
 import apiclient.errors
+import gdrivefs.config
 
 DEFAULT_CHUNK_SIZE = 1024 * 512
 
@@ -47,7 +48,7 @@ class ChunkedDownload(object):
         self._rand = random.random
 
     @util.positional(1)
-    def next_chunk(self, num_retries=0):
+    def next_chunk(self, num_retries=gdrivefs.config.DEFAULT_RETRIES):
         """Get the next chunk of the download.
 
         Args:
