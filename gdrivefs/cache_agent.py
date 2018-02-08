@@ -95,7 +95,7 @@ class CacheAgent(object):
             #                    in cache_dict.iteritems() ]
 
             cleanup_keys = [ key for key, value_tuple \
-                                in cache_dict.iteritems() \
+                                in cache_dict.items() \
                                 if (datetime.datetime.now() - value_tuple[1]).seconds > \
                                         self.max_age ]
 
