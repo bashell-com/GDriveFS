@@ -33,6 +33,11 @@ def _main():
         nargs=1)
 
     p.add_argument(
+        '-s', '--singlethread',
+        help='Single Thread',
+        action='store_true')
+
+    p.add_argument(
         '-v', '--verbose',
         action='store_true',
         help='Print logging')
@@ -55,7 +60,7 @@ def _main():
         auth_storage_filepath=auth_storage_filepath,
         mountpoint=args.mountpoint,
         debug=gdrivefs.config.IS_DEBUG,
-        nothreads=gdrivefs.config.IS_DEBUG,
+        nothreads=args.singlethread,
         option_string=option_string)
 
 if __name__ == '__main__':
