@@ -12,7 +12,7 @@ import functools
 import threading
 import os
 
-import httplib2
+import httplib2shim
 
 import apiclient.discovery
 import apiclient.http
@@ -27,6 +27,8 @@ import gdrivefs.oauth_authorize
 import gdrivefs.normal_entry
 import gdrivefs.time_support
 import gdrivefs.fsutility
+
+httplib2shim.patch()
 
 _CONF_SERVICE_NAME = 'drive'
 _CONF_SERVICE_VERSION = 'v2'
@@ -122,7 +124,7 @@ class GdriveAuth(object):
             self.__check_authorization()
             _logger.debug("Getting authorized HTTP tunnel.")
                 
-            http = httplib2.Http()
+            http = httplib2shim.Http()
             self.__credentials.authorize(http)
 
             _logger.debug("Got authorized tunnel.")

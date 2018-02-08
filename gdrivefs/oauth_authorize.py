@@ -7,10 +7,12 @@ import tempfile
 
 import oauth2client.client
 
-import httplib2
+import httplib2shim
 
 import gdrivefs.conf
 import gdrivefs.errors
+
+httplib2shim.patch()
 
 _LOGGER = logging.getLogger(__name__)
 _LOGGER.setLevel(logging.INFO)
@@ -68,7 +70,7 @@ class OauthAuthorize(object):
     def __refresh_credentials(self):
         _LOGGER.debug("Doing credentials refresh.")
 
-        http = httplib2.Http()
+        http = httplib2shim.Http()
 
         try:
             self.__credentials.refresh(http)
