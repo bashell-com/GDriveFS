@@ -217,7 +217,7 @@ class _GdriveManager(object):
         next_page_token = response.get(u'nextPageToken')
 
         changes = []
-        last_change_id = None
+        # last_change_id = None
         for item in items:
             change_id = int(item[u'id'])
             entry_id = item[u'fileId']
@@ -243,7 +243,7 @@ class _GdriveManager(object):
                         entry)
 
             changes.append((change_id, (entry_id, was_deleted, normalized_entry)))
-            last_change_id = change_id
+            # last_change_id = change_id
 
         return (largest_change_id, next_page_token, changes)
 

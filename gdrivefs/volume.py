@@ -123,7 +123,7 @@ class PathRelations(object):
             entry_children_tuples = entry_clause[CLAUSE_CHILDREN]
 
             parents_to_remove = [ ]
-            children_to_remove = [ ]
+            # children_to_remove = [ ]
             if entry_parents:
                 for parent_clause in entry_parents:
                     # A placeholder has an entry and parents field (fields 
@@ -143,8 +143,8 @@ class PathRelations(object):
                                      (parent_id, entry_id))
                         continue
             
-                    old_children_filenames = [ child_tuple[0] for child_tuple 
-                                                in parent_children ]
+                    # old_children_filenames = [ child_tuple[0] for child_tuple
+                    #                            in parent_children ]
 
                     updated_children = [ child_tuple for child_tuple 
                                          in parent_children 
@@ -158,9 +158,9 @@ class PathRelations(object):
                                       "with ID [%s], but not vice-versa." % 
                                       (entry_id, parent_id))
 
-                    updated_children_filenames = [ child_tuple[0] 
-                                                    for child_tuple
-                                                    in parent_children ]
+                    # updated_children_filenames = [ child_tuple[0]
+                    #                                for child_tuple
+                    #                                in parent_children ]
 
                     # If the parent now has no children and is a placeholder, 
                     # advise that we remove it.
@@ -360,7 +360,7 @@ class PathRelations(object):
         with PathRelations.rlock:
             children = gd.list_files(parent_id=parent_id)
 
-            child_ids = [ ]
+            # child_ids = [ ]
             if children:
                 for child in children:
                         self.register_entry(child)
@@ -484,8 +484,8 @@ class PathRelations(object):
                 for child in children:
                     self.register_entry(child)
 
-                filenames_phrase = ', '.join([ candidate.id for candidate
-                                                            in children ])
+                # filenames_phrase = ', '.join([ candidate.id for candidate
+                #                                            in children ])
 #                self.__log.debug("(%d) candidate children were found: %s",
 #                                 len(children), filenames_phrase)
 
@@ -518,7 +518,7 @@ class PathRelations(object):
             path_parts = path.split('/')
 
             entry_ptr = root_id
-            parent_id = None
+            # parent_id = None
             i = 0
             num_parts = len(path_parts)
             results = [ ]
@@ -537,7 +537,7 @@ class PathRelations(object):
                 # already beeen handled as entries were stored. We name the variable 
                 # just to emphasize that no ambiguity -as well as- no error will 
                 # occur in the traversal process.
-                first_matching_child_clause = None
+                # first_matching_child_clause = None
                 children = current_clause[2]
             
                 # If they just wanted the "" path (root), return the root-ID.
@@ -562,7 +562,7 @@ class PathRelations(object):
 
                     return self.path_cache[path]
 
-                parent_id = entry_ptr
+                # parent_id = entry_ptr
                 entry_ptr = found[0]
                 i += 1
 

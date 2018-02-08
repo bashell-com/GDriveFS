@@ -282,7 +282,7 @@ class OpenedFile(object):
                      self.__temp_filepath, entry, self.mime_type)
 
         if entry.requires_mimetype:
-            length = DisplacedFile.file_size
+            # length = DisplacedFile.file_size
 
             d = DisplacedFile(entry)
             stub_data = d.deposit_file(self.mime_type)
@@ -307,7 +307,7 @@ class OpenedFile(object):
                             entry,
                             self.mime_type)
 
-                (length, cache_fault) = result
+                # (length, cache_fault) = result
             except ExportFormatError:
                 _LOGGER.exception("There was an export-format error.")
                 raise fuse.FuseOSError(ENOENT)

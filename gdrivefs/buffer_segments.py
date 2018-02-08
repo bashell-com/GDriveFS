@@ -106,7 +106,7 @@ class BufferSegments(object):
                 # existing file should shrink over time.
 
                 (seg_offset, seg_data) = self.__segments[seg_index]
-                seg_len = len(seg_data)
+                # seg_len = len(seg_data)
                 
                 # If our data is to be written into the middle of the segment, 
                 # split the segment such that the unnecessary prefixing bytes are 
@@ -122,7 +122,7 @@ class BufferSegments(object):
                     (_, (seg_offset, seg_data)) = self.__split(seg_index, 
                                                                prefix_len)
 
-                    seg_len = prefix_len
+                    # seg_len = prefix_len
                     seg_index += 1
 
                 # Now, apply the update. Collect the number of segments that will 

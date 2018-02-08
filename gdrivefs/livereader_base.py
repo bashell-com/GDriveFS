@@ -10,7 +10,7 @@ class LiveReaderBase(object):
         self.__data = None
 
     def __getitem__(self, key):
-        child_name = self.__class__.__name__
+        # child_name = self.__class__.__name__
 
         try:
             return self.__data[key]

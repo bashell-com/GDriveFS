@@ -207,7 +207,7 @@ class NormalEntry(object):
             in self.__raw_data.iteritems()
         }
 
-        distilled = self.__info
+        # distilled = self.__info
 
         extra = {
             key: getattr(self, key)
