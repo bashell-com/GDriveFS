@@ -1,29 +1,26 @@
-import logging
-import random
-import json
-import time
-import httplib
-import ssl
-import pprint
-import functools
-import threading
-import os
-
-import httplib2shim
-
 import apiclient.discovery
-import apiclient.http
 import apiclient.errors
-
-import gdrivefs.constants
-import gdrivefs.config
-import gdrivefs.conf
+import apiclient.http
+import functools
 import gdrivefs.chunked_download
+import gdrivefs.conf
+import gdrivefs.config
+import gdrivefs.constants
 import gdrivefs.errors
-import gdrivefs.oauth_authorize
-import gdrivefs.normal_entry
-import gdrivefs.time_support
 import gdrivefs.fsutility
+import gdrivefs.normal_entry
+import gdrivefs.oauth_authorize
+import gdrivefs.time_support
+import httplib
+import httplib2shim
+import json
+import logging
+import os
+import pprint
+import random
+import ssl
+import threading
+import time
 
 httplib2shim.patch()
 

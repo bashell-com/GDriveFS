@@ -1,16 +1,13 @@
-import os
-import logging
-import pickle
-import json
 import datetime
-import tempfile
-
-import oauth2client.client
-
-import httplib2shim
-
 import gdrivefs.conf
 import gdrivefs.errors
+import httplib2shim
+import json
+import logging
+import oauth2client.client
+import os
+import pickle
+import tempfile
 
 httplib2shim.patch()
 

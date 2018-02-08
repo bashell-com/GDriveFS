@@ -1,7 +1,6 @@
+from threading import Lock
 import logging
 import pprint
-
-from threading import Lock
 
 _logger = logging.getLogger(__name__)
 

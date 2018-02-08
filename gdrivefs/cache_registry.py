@@ -1,7 +1,6 @@
-import logging
-
-from threading import RLock
 from datetime import datetime
+from threading import RLock
+import logging
 
 _logger = logging.getLogger(__name__)
 _logger.setLevel(logging.INFO)

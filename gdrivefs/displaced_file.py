@@ -1,11 +1,9 @@
-import logging
-import json
-import tempfile
-import os
-
-
 from gdrivefs.drive import get_gdrive
 from gdrivefs.normal_entry import NormalEntry
+import json
+import logging
+import os
+import tempfile
 
 _logger = logging.getLogger(__name__)
 

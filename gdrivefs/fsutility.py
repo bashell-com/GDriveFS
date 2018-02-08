@@ -1,11 +1,9 @@
+from fuse import FuseOSError, fuse_get_context
+from gdrivefs.errors import GdNotFoundError
+from os.path import split
+import fuse
 import logging
 import re
-import fuse
-
-from os.path import split
-from fuse import FuseOSError, fuse_get_context
-
-from gdrivefs.errors import GdNotFoundError
 
 _logger = logging.getLogger(__name__)
 

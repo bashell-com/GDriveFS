@@ -1,20 +1,17 @@
-import logging
-import resource
-import os
-import tempfile
-import shutil
-import threading
-
-import fuse
-
 from errno import EMFILE, ENOENT, EIO
-
+from gdrivefs.displaced_file import DisplacedFile
+from gdrivefs.drive import get_gdrive
 from gdrivefs.errors import ExportFormatError, GdNotFoundError
 from gdrivefs.fsutility import dec_hint, split_path, build_filepath
-from gdrivefs.displaced_file import DisplacedFile
 from gdrivefs.volume import PathRelations, EntryCache, path_resolver, \
-                                  CLAUSE_ID, CLAUSE_ENTRY
-from gdrivefs.drive import get_gdrive
+                            CLAUSE_ID, CLAUSE_ENTRY
+import fuse
+import logging
+import os
+import resource
+import shutil
+import tempfile
+import threading
 
 _LOGGER = logging.getLogger(__name__)
 

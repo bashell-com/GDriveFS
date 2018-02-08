@@ -1,16 +1,14 @@
-import logging
-import dateutil.parser
-import time
-
-from time import mktime
-from mimetypes import guess_type
-from numbers import Number
 from datetime import datetime
-
 from gdrivefs.conf import Conf
-from gdrivefs.utility import utility
 from gdrivefs.errors import ExportFormatError
 from gdrivefs.time_support import get_flat_normal_fs_time_from_dt
+from gdrivefs.utility import utility
+from mimetypes import guess_type
+from numbers import Number
+from time import mktime
+import dateutil.parser
+import logging
+import time
 
 _logger = logging.getLogger(__name__)
 

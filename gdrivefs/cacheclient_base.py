@@ -1,6 +1,5 @@
-import logging
-
 from gdrivefs.cache_agent import CacheAgent
+import logging
 
 _logger = logging.getLogger(__name__)
 

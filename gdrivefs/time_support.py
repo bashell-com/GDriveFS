@@ -1,6 +1,6 @@
-from math import floor
 from datetime import datetime
 from dateutil.tz import tzlocal, tzutc
+from math import floor
 
 DTF_DATETIME = '%Y%m%d-%H%M%S'
 DTF_DATETIMET = '%Y-%m-%dT%H:%M:%S'

@@ -1,34 +1,26 @@
-import logging
-import stat
-import os
-import pprint
-import math
-
 from errno import ENOENT, EIO, EISDIR, ENOTDIR, ENOTEMPTY, EPERM
-from fuse import FUSE, Operations, FuseOSError, fuse_get_context, \
-                 LoggingMixIn
-from time import time
+from fuse import FUSE, Operations, FuseOSError, fuse_get_context, LoggingMixIn
+from gdrivefs.account_info import AccountInfo
+from gdrivefs.change import get_change_manager
+from gdrivefs.conf import Conf
+from gdrivefs.displaced_file import DisplacedFile
+from gdrivefs.drive import get_gdrive
+from gdrivefs.errors import GdNotFoundError
+from gdrivefs.fsutility import split_path, build_filepath, dec_hint
+from gdrivefs.time_support import get_flat_normal_fs_time_from_epoch
+from gdrivefs.utility import utility
+from gdrivefs.volume import PathRelations, EntryCache, CLAUSE_ENTRY, CLAUSE_ID
+from gdrivefs.volume import path_resolver
 from os.path import split
-
-import gdrivefs.opened_file
+from time import time
 import gdrivefs.config.changes
 import gdrivefs.config.fs
-
-from gdrivefs.utility import utility
-from gdrivefs.change import get_change_manager
-from gdrivefs.volume import PathRelations, EntryCache, \
-                                  CLAUSE_ENTRY, \
-                                  CLAUSE_ID
-from gdrivefs.conf import Conf
-from gdrivefs.drive import get_gdrive
-from gdrivefs.account_info import AccountInfo
-
-from gdrivefs.fsutility import split_path, \
-                                    build_filepath, dec_hint
-from gdrivefs.displaced_file import DisplacedFile
-from gdrivefs.volume import path_resolver
-from gdrivefs.errors import GdNotFoundError
-from gdrivefs.time_support import get_flat_normal_fs_time_from_epoch
+import gdrivefs.opened_file
+import logging
+import math
+import os
+import pprint
+import stat
 
 _logger = logging.getLogger(__name__)
 

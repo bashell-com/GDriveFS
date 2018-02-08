@@ -1,14 +1,13 @@
+import apiclient.errors
+import apiclient.http
+import gdrivefs.config
 import logging
-import time
 import random
-
+import time
 try:
     from oauth2client import util
 except ImportError:
     from oauth2client import _helpers as util
-import apiclient.http
-import apiclient.errors
-import gdrivefs.config
 
 DEFAULT_CHUNK_SIZE = 1024 * 512
 

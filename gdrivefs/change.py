@@ -1,13 +1,11 @@
+from gdrivefs.account_info import AccountInfo
+from gdrivefs.conf import Conf
+from gdrivefs.drive import get_gdrive
+from gdrivefs.volume import PathRelations
+import gdrivefs.state
 import logging
 import threading
 import time
-
-import gdrivefs.state
-
-from gdrivefs.conf import Conf
-from gdrivefs.account_info import AccountInfo
-from gdrivefs.drive import get_gdrive
-from gdrivefs.volume import PathRelations
 
 _logger = logging.getLogger(__name__)
 _logger.setLevel(logging.WARNING)

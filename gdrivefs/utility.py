@@ -1,9 +1,8 @@
-import logging
+import gdrivefs.conf
 import json
+import logging
 import re
 import sys
-
-import gdrivefs.conf
 
 _logger = logging.getLogger(__name__)
 

@@ -1,5 +1,5 @@
-import logging
 from apiclient.discovery import DISCOVERY_URI
+import logging
 
 _logger = logging.getLogger(__name__)
 

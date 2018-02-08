@@ -5,14 +5,13 @@ import os.path
 dev_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, dev_path)
 
-import logging
-import webbrowser
 import argparse
-
+import gdrivefs.auto_auth
 import gdrivefs.config.log
 import gdrivefs.gdfuse
 import gdrivefs.oauth_authorize
-import gdrivefs.auto_auth
+import logging
+import webbrowser
 
 _logger = logging.getLogger(__name__)
 

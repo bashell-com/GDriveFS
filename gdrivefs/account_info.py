@@ -1,7 +1,6 @@
-import logging
-
-from gdrivefs.livereader_base import LiveReaderBase
 from gdrivefs.drive import get_gdrive
+from gdrivefs.livereader_base import LiveReaderBase
+import logging
 
 _logger = logging.getLogger(__name__)
 

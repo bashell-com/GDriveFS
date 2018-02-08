@@ -1,15 +1,13 @@
+import BaseHTTPServer
+import SocketServer
+import cStringIO
+import gdrivefs.conf
+import gdrivefs.oauth_authorize
 import logging
 import threading
-import webbrowser
 import time
 import urlparse
-
-import SocketServer
-import BaseHTTPServer
-import cStringIO
-
-import gdrivefs.oauth_authorize
-import gdrivefs.conf
+import webbrowser
 
 _LOGGER = logging.getLogger(__name__)
 

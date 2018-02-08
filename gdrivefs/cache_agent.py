@@ -1,14 +1,10 @@
+from gdrivefs.cache_registry import CacheRegistry, CacheFault
+from gdrivefs.conf import Conf
+import datetime
+import gdrivefs.state
 import logging
 import threading
 import time
-import datetime
-
-#import gdrivefs.report
-
-import gdrivefs.state
-
-from gdrivefs.conf import Conf
-from gdrivefs.cache_registry import CacheRegistry, CacheFault
 
 _logger = logging.getLogger(__name__)
 _logger.setLevel(logging.INFO)

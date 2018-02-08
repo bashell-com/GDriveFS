@@ -1,15 +1,13 @@
-import logging
-
-from collections    import deque
-from threading      import RLock
-
-from gdrivefs.utility import utility
+from collections import deque
+from gdrivefs.account_info import AccountInfo
+from gdrivefs.cacheclient_base import CacheClientBase
 from gdrivefs.conf import Conf
 from gdrivefs.drive import get_gdrive
-from gdrivefs.account_info import AccountInfo
-from gdrivefs.normal_entry import NormalEntry
-from gdrivefs.cacheclient_base import CacheClientBase
 from gdrivefs.errors import GdNotFoundError
+from gdrivefs.normal_entry import NormalEntry
+from gdrivefs.utility import utility
+from threading import RLock
+import logging
 
 CLAUSE_ENTRY            = 0 # Normalized entry.
 CLAUSE_PARENT           = 1 # List of parent clauses.
