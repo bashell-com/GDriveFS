@@ -16,7 +16,7 @@ _logger = logging.getLogger(__name__)
 # TODO(Dustin): Refactor this to be nice. It's largely just copy+pasted.
 
 
-class ChunkedDownload(object):
+class ChunkedDownload:
     """"Download an entry, chunk by chunk. This code is mostly identical to
     MediaIoBaseDownload, which couldn't be used because we have a specific URL
     that needs to be downloaded (not a request object, which doesn't apply here).

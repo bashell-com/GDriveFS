@@ -9,7 +9,7 @@ _logger = logging.getLogger(__name__)
 # TODO(dustin): Make these individual functions.
 
 
-class _DriveUtility(object):
+class _DriveUtility:
     """General utility functions loosely related to GD."""
 
 #    # Mime-types to translate to, if they appear within the "exportLinks" list.

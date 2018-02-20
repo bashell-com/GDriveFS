@@ -21,7 +21,7 @@ _LOGGER = logging.getLogger(__name__)
 #               content. Then, switch back.
 
 
-class _OpenedManager(object):
+class _OpenedManager:
     """Manages all of the currently-open files."""
 
     __opened_lock = threading.RLock()
@@ -171,7 +171,7 @@ _OPENED_ENTRIES_LOCK = threading.Lock()
 _OPENED_ENTRIES = set()
 
 
-class OpenedFile(object):
+class OpenedFile:
     """This class describes a single open file, and manages changes."""
 
     def __init__(self, entry_id, path, filename, is_hidden, mime_type):

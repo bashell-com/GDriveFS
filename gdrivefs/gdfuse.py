@@ -78,7 +78,7 @@ def get_entry_or_raise(raw_path, allow_normal_for_missing=False):
     return (entry_clause[CLAUSE_ENTRY], path, filename)
 
 
-class _GdfsMixin(object):
+class _GdfsMixin:
     """The main filesystem class."""
 
     def __register_open_file(self, fh, path, entry_id):

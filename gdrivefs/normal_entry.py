@@ -13,7 +13,7 @@ import time
 _logger = logging.getLogger(__name__)
 
 
-class NormalEntry(object):
+class NormalEntry:
     __directory_mimetype = Conf.get('directory_mimetype')
 
     __properties_extra = [

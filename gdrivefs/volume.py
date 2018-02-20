@@ -28,7 +28,7 @@ def path_resolver(path):
     return (parent_clause[CLAUSE_ENTRY], parent_clause)
 
 
-class PathRelations(object):
+class PathRelations:
     """Manages physical path representations of all of the entries in our "
     account.
     """

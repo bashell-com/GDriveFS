@@ -15,7 +15,7 @@ _LOGGER = logging.getLogger(__name__)
 _LOGGER.setLevel(logging.INFO)
 
 
-class OauthAuthorize(object):
+class OauthAuthorize:
     """Manages authorization process."""
 
     def __init__(

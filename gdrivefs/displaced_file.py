@@ -8,7 +8,7 @@ import tempfile
 _logger = logging.getLogger(__name__)
 
 
-class DisplacedFile(object):
+class DisplacedFile:
     normalized_entry = None
     file_size = 1000
 

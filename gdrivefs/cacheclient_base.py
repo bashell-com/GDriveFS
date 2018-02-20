@@ -4,7 +4,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-class CacheClientBase(object):
+class CacheClientBase:
     """Meant to be inherited by a class. Is used to configure a particular 
     namespace within the cache.
     """

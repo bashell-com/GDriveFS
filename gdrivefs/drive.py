@@ -103,7 +103,7 @@ def _marshall(f):
     return wrapper
 
 
-class GdriveAuth(object):
+class GdriveAuth:
     def __init__(self):
         self.__client = None
         self.__authorize = gdrivefs.oauth_authorize.get_auth()
@@ -164,7 +164,7 @@ class GdriveAuth(object):
         return self.__client
 
 
-class _GdriveManager(object):
+class _GdriveManager:
     """Handles all basic communication with Google Drive. All methods should
     try to invoke only one call, or make sure they handle authentication 
     refreshing when necessary.

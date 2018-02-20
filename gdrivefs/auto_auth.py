@@ -20,7 +20,7 @@ class _HTTPRequest(http.server.BaseHTTPRequestHandler):
         self.parse_request()
 
 
-class _WebserverMonitor(object):
+class _WebserverMonitor:
     def __init__(self, filepath):
         self.__filepath = filepath
 
@@ -172,7 +172,7 @@ GDFS authorization recorded.
         return self._authcode
 
 
-class AutoAuth(object):
+class AutoAuth:
     """Knows how to open the browser, authorize the application (prompting the
     user if necessary), redirect, receive the response, and store the
     credentials.

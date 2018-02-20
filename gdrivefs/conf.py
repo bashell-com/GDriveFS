@@ -7,7 +7,7 @@ _logger = logging.getLogger(__name__)
 #               class, and use the module directly.
 
 
-class Conf(object):
+class Conf:
     """Manages options."""
 
     api_credentials = {

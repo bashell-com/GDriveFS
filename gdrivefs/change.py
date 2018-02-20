@@ -11,7 +11,7 @@ _logger = logging.getLogger(__name__)
 _logger.setLevel(logging.WARNING)
 
 
-class _ChangeManager(object):
+class _ChangeManager:
     def __init__(self):
         self.at_change_id = AccountInfo.get_instance().largest_change_id
         _logger.debug("Latest change-ID at startup is (%d)." % 

@@ -5,7 +5,7 @@ import pprint
 _logger = logging.getLogger(__name__)
 
 
-class BufferSegments(object):
+class BufferSegments:
     """Describe a series of strings that, when concatenated, represent the 
     whole file. This is used to try and contain the amount of the data that has
     the be copied as updates are applied to the file.

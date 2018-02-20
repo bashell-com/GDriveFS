@@ -10,7 +10,7 @@ _logger = logging.getLogger(__name__)
 _logger.setLevel(logging.INFO)
 
 
-class CacheAgent(object):
+class CacheAgent:
     """A particular namespace within the cache."""
 
     registry        = None

@@ -3,7 +3,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-class LiveReaderBase(object):
+class LiveReaderBase:
     """A base object for data that can be retrieved on demand."""
 
     def __init__(self):

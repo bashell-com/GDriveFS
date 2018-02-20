@@ -10,7 +10,7 @@ class CacheFault(Exception):
     pass
 
 
-class CacheRegistry(object):
+class CacheRegistry:
     """The main cache container."""
 
     __rlock = RLock()
