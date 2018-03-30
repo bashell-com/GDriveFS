@@ -540,8 +540,8 @@ class _GdfsMixin:
 
         try:
             account_info = AccountInfo.get_instance()
-            total = account_info.quota_bytes_total / block_size_b
-            used = account_info.quota_bytes_used / block_size_b
+            total = account_info.quota_bytes_total // block_size_b
+            used = account_info.quota_bytes_used // block_size_b
             free = total - used
         except:
             _logger.exception("Could not get account-info.")
