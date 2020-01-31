@@ -3,7 +3,7 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
-# TODO(dustin): Move this module to the *config* directory, eliminate this 
+# TODO(dustin): Move this module to the *config* directory, eliminate this
 #               class, and use the module directly.
 
 
@@ -11,13 +11,13 @@ class Conf:
     """Manages options."""
 
     api_credentials = {
-        "web": { "client_id": "1056816309698.apps.googleusercontent.com",
-                 "client_secret": "R7FJFlbtWXgUoG3ZjIAWUAzv",
+        "web": { "client_id": "1004122597540-ne2btnejcbr319ukdh9soke1rrldl27f.apps.googleusercontent.com",
+                 "client_secret": "TwkunuaxFi9IMs218VkJEkCX",
                  "redirect_uris": [],
                  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
                  "token_uri": "https://accounts.google.com/o/oauth2/token"
                }}
-    
+
     auth_cache_filepath                 = None
 #    gd_to_normal_mapping_filepath       = '/etc/gdfs/mime_mapping.json'
     extension_mapping_filepath          = '/etc/gdfs/extension_mapping.json'
